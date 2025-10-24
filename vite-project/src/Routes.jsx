@@ -13,7 +13,6 @@ import Shop from "./Pages/Shop";
 import Blog from "./Pages/Blog";
 import Cart from "./Pages/Cart";
 import ProductDetails from "./Pages/ProductDetails";
-import Login from "./Pages/Login";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,7 +23,6 @@ const router = createBrowserRouter(
     >
       <Route index element={<Home />} />
       <Route path="shop" element={<Shop />} />
-      <Route path="login" element={<Login />} />
       <Route path="/product/:id" element={<ProductDetails />} />
       <Route path="blog" element={<Blog />} />
       <Route path="cart" element={<Cart />} />

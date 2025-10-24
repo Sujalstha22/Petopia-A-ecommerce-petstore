@@ -1,11 +1,14 @@
 import { NavLink } from "react-router-dom";
 import LOGO from "../assets/LOGO.png";
+import { PiShoppingCartSimpleFill } from "react-icons/pi";
 import Search from "./Search";
 import { useState } from "react";
 import LoginModal from "./LoginModal";
+import SignInModal from "./SignInModal";
 
-const Navbar = () => {
+const Navbar = ({ onCartClick }) => {
   const [showLogin, setShowLogin] = useState(false);
+  const [showSignin, setShowSignin] = useState(false);
   return (
     <div className="bg-orange-100">
       <header className="px-9 py-3 mx-5 flex items-center">
@@ -19,7 +22,6 @@ const Navbar = () => {
               {[
                 { to: "/about", label: "ABOUT US" },
                 { to: "/shop", label: "SHOP" },
-                { to: "/cart", label: "CART" },
                 { to: "/contact", label: "CONTACT" },
                 { to: "/blog", label: "BLOG" },
               ].map(({ to, label, end }) => (
@@ -49,8 +51,20 @@ const Navbar = () => {
         </button>
 
         <LoginModal isOpen={showLogin} onClose={() => setShowLogin(false)} />
-        <button className="px-4 py-2 w-30 mx-4 border font-[Staatliches] border-orange-900 text-orange-900 font-semibold hover:bg-orange-50 transition rounded-2xl text-lg">
+
+        <button
+          className="px-4 py-2 w-30 mx-4 border font-[Staatliches] border-orange-900 text-orange-900 font-semibold hover:bg-orange-50 transition rounded-2xl text-lg"
+          onClick={() => setShowSignin(true)}
+        >
           Sign In
+        </button>
+        <SignInModal isOpen={showSignin} onClose={() => setShowSignin(false)} />
+
+        <button onClick={onCartClick} className="relative p-2">
+          <PiShoppingCartSimpleFill className="text-orange-500 w-6 h-6" />
+          <span className="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full px-1">
+            3
+          </span>
         </button>
       </header>
     </div>

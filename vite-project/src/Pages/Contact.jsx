@@ -15,24 +15,14 @@ const Contact = () => {
       {/* Background Paw Pattern */}
       <div className="absolute inset-0 opacity-10 paw-pattern"></div>
 
-      <div className="container mx-auto relative z-10 px-6 md:px-16 py-12">
+      <div className="container relative z-10 px-6 md:px-16 py-12">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <section className="relative h-100 bg-white p-8 md:p-16 flex flex-col md:flex-row items-center justify-between rounded-xl shadow-lg overflow-hidden">
+          <section className="relative h-100 p-8 md:p-10 flex flex-col md:flex-row items-center justify-between rounded-xl ">
             {/* Text Content */}
-            <div
-              className="absolute -z-0 w-30 h-30 md:w-30 md:h-30 bg-gradient-to-br from-orange-400 to-orange-200 flex items-end justify-center rounded-[50%_40%_55%_45%] 
-                  clip-path-[polygon(30%_0%,_70%_0%,_100%_40%,_80%_100%,_20%_100%,_0%_40%)]  -top-10 right-200"
-            ></div>
-            <div
-              className="absolute -z-0 w-30 h-30 md:w-20 md:h-20 bg-gradient-to-br from-orange-400 to-orange-200 flex items-end justify-center rounded-[50%_40%_55%_45%] 
-                  clip-path-[polygon(30%_0%,_70%_0%,_100%_40%,_80%_100%,_20%_100%,_0%_40%)]  -bottom-10 left-70"
-            ></div>
-            {/* <div className="absolute w-30 h-30 md:w-120 md:h-120 top-60 right-120">
-              <img src={petImage2} alt="cat-silloute" />
-            </div> */}
+            <div className="absolute -z-0 w-30 h-30 md:w-30 md:h-30 -top-10 right-200"></div>
             <div className="text-left ml-10 md:w-1/2 mb-8 md:mb-0">
-              <h2 className="text-gray-700 text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-black text-5xl md:text-5xl font-bold mb-4">
                 If animals could talk, <br /> they’d talk about us!
               </h2>
               <p className="text-gray-600 mb-6">
@@ -45,16 +35,23 @@ const Contact = () => {
             </div>
 
             {/* Image */}
-            <div className=" absolute -bottom-10 right-30 :w-1/2 flex justify-center">
+            <div className=" absolute bottom-0 right-30 :w-1/2 flex justify-center">
               <div
                 className="relative w-72 h-72 md:w-96 md:h-96 bg-gradient-to-br from-orange-400 to-orange-200 flex items-end justify-center rounded-[50%_40%_55%_45%] 
                   clip-path-[polygon(30%_0%,_70%_0%,_100%_40%,_80%_100%,_20%_100%,_0%_40%)]"
               >
+                <div
+                  className=" w-35 h-35 md:w-72 md:h-72 bg-gradient-to-br from-orange-200 to-orange-500 flex items-end justify-center rounded-[50%_40%_55%_45%] 
+                  clip-path-[polygon(30%_0%,_70%_0%,_100%_40%,_80%_100%,_20%_100%,_0%_40%)]"
+                >
+                  {" "}
+                </div>
                 <img
                   src={petImage}
                   alt="Pet Silhouette"
-                  className="absolute bottom-0 w-80 h-80 md:w-96 md:h-96 object-contain"
+                  className="absolute -bottom-10 w-90 h-90 md:w-120 md:h-120 object-contain"
                 />
+
                 {/* Optional paw prints background */}
                 <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
                   <span className="absolute top-4 left-4 text-white text-2xl">
