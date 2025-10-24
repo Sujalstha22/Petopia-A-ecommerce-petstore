@@ -1,8 +1,11 @@
 import { NavLink } from "react-router-dom";
 import LOGO from "../assets/LOGO.png";
 import Search from "./Search";
+import { useState } from "react";
+import LoginModal from "./LoginModal";
 
 const Navbar = () => {
+  const [showLogin, setShowLogin] = useState(false);
   return (
     <div className="bg-orange-100">
       <header className="px-9 py-3 mx-5 flex items-center">
@@ -37,13 +40,15 @@ const Navbar = () => {
             </ul>
           </nav>
         </div>
-        {/* <Search /> */}
-        <NavLink to={"/login"}>
-          <button className="px-4 py-2 w-30 border font-[Staatliches] border-orange-900 text-orange-900 font-semibold hover:bg-orange-50 transition rounded-2xl text-lg">
-            Log in
-          </button>
-        </NavLink>
 
+        <button
+          className="px-4 py-2 w-30 mx-4 border font-[Staatliches] border-orange-900 text-orange-900 font-semibold hover:bg-orange-50 transition rounded-2xl text-lg"
+          onClick={() => setShowLogin(true)}
+        >
+          Login
+        </button>
+
+        <LoginModal isOpen={showLogin} onClose={() => setShowLogin(false)} />
         <button className="px-4 py-2 w-30 mx-4 border font-[Staatliches] border-orange-900 text-orange-900 font-semibold hover:bg-orange-50 transition rounded-2xl text-lg">
           Sign In
         </button>
