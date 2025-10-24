@@ -1,0 +1,4 @@
+.itemViewActions button.active svg {
+  color: red !important;
+  background-color: azure !important;
+}

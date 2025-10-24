@@ -1,0 +1,47 @@
+/* Style.css */
+
+/* Main product card */
+.productitem {
+  background-color: #fff5f5; /* very light red/pink to blend with bg-red-800 */
+  border: 1px solid #e5e7eb; /* subtle border */
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  padding: 3px;
+}
+
+/* Hover effect for card */
+.productitem:hover {
+  background-color: #fee2e2; /* slightly deeper soft red */
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+/* Info section */
+.info {
+  text-align: left;
+  color: #1f2937; /* neutral gray text for contrast */
+}
+
+.info h6 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280; /* muted gray for subtitle */
+  margin-bottom: 4px;
+}
+
+.info .title {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(17, 17, 17);
+  line-height: 1.4;
+}
+
+/* Link styling */
+.link {
+  text-decoration: none;
+  display: block;
+}
+
+.link:hover .title {
+  color: #991b1b; /* richer red on hover */
+}
