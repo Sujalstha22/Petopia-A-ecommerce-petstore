@@ -150,6 +150,9 @@ const Contact = () => {
 
         {/* Google Maps Embed */}
         <div className="mt-16 overflow-hidden shadow-md rounded-2xl">
+          <h2 className="text-2xl font-[Staatliches] text-gray-800 mb-6 flex items-center gap-2">
+            <FaPaw className="text-[#ff914d]" /> Locate us
+          </h2>
           <iframe
             className="w-full h-80 rounded-2xl"
             title="Petopia Location"

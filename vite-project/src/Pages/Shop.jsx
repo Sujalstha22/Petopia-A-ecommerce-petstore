@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import HomeIcon from "@mui/icons-material/Home";
 import Link from "@mui/material/Link";
@@ -12,6 +13,7 @@ import ProductItemList from "../Components/ProductItem/ProductItemList";
 import Sidebar from "../Components/Sidebar/Index";
 import "./style.css";
 
+import { styled } from "@mui/material";
 const Shop = () => {
   const [itemView, setItemView] = useState("grid");
   const [anchorEl, setAnchorEl] = React.useState(null);
